@@ -53,6 +53,15 @@ function department_table() {
 
 }
 
+
+add_filter('template_include', 'function_name');
+function function_name( $template ) {
+	if ( is_page('page-slug') ){
+		return wp_normalize_path( WP_PLUGIN_DIR ) . '/telephone/frontend/page-slug.php';
+	}
+	return $template;
+}
+
 register_activation_hook(__FILE__, 'workers_table');
 register_activation_hook(__FILE__, 'department_table');
 
@@ -95,3 +104,4 @@ function allDepartments()
 {
 	include "display_departments.php";
 }
+
