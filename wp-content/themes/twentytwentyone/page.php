@@ -8,7 +8,7 @@
  * @subpackage Twenty_Twenty_One
  * @since Twenty Twenty-One 1.0
  */
-
+echo get_query_var( 'pagename' );
 get_header();
 
 /* Start the Loop */
