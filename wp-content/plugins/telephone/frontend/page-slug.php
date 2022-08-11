@@ -8,11 +8,6 @@ $tablename  = $wpdb->prefix . "workers";
 $tablename2 = $wpdb->prefix . "departments";
 
 
-if ( isset( $_GET['delete_id'] ) ) {
-	$delid = $_GET['delete_id'];
-	$wpdb->query( "DELETE FROM " . $tablename . " WHERE id=" . $delid );
-}
-
 if ( isset( $_POST['find'] ) ) {
 	$data = $_POST['find'];
 	$data=explode(" ", $data);
